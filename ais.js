@@ -5,7 +5,7 @@
  * By ericqin http://weibo.com/513178997
  * AIS.js http://ais.github.io/
  * My website:http://oninternet.sinaapp.com/
- * MIT Licensed.
+ * MIT Licensed .
  */
 
  
