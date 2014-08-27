@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: ais.array.js</title>
+    <title>JSDoc: Source: ais.hashmap.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: ais.array.js</h1>
+    <h1 class="page-title">Source: ais.hashmap.js</h1>
 
     
 
@@ -26,74 +26,51 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @namespace AIS数组通用函数库
+ * @namespace AIS hashmap对象
  * @author qinmudi
  */
-
-/**
- * 深度复制数组
- * @author qinmudi
- * @param  {array} source 目标数组
- * @example
- * 	var arr1 = [[1,2,3],4,5];
- *  var arr2 = [];
- *  arr2.extend(arr1);
- *  arr1[0][0] = 0;
- *  alert([arr1[0][0],arr2[0][0]]);
- */
-Array.prototype.extend = function(source) {
-	for (var attr in source) {
-		if (Object.prototype.toString.call(source[attr]).slice(8, -1).toLowerCase() === 'array') {
-			this[attr] = [];
-			this[attr].extend(source[attr]);
-		} else {
-			this[attr] = source[attr];
-		}
-	}
-}
-
 function hashMap() {
-
 	/**  
-	 * Map大小
+	 * @description Map大小
 	 */
 	var size = 0;
 	/**  
-	 * 容器默认最大长度
+	 * @description 容器默认最大长度
 	 */
 	var length = 256
 	var loadfactor = 0.75;
 	/**  
-	 * 质数
+	 * @description 质数
 	 */
 	var prime = 1000000;
 	/**  
-	 * 对象
+	 * @description 对象
 	 */
 	var table = new Array(length);
 
 	/**  
-	 * 设置构建Hash质数
-	 * @param {Object} p
+	 * @description 设置构建Hash质数
+	 * @param {Object} p 要传入的质数
 	 */
 	this.setPrime = function(p) {
 		this.prime = p;
 	}
 	/**  
-	 * 获取构建Hash质数
+	 * @description 获取构建Hash质数
+	 * @return {number} 返回质数值
 	 */
 	this.getPrime = function() {
 		return this.prime;
 	}
 	/**  
-	 * 当期的Hash值计算方法
+	 * @description 当期的Hash值计算方法
 	 */
 	this.hash = BKDRHash;
 
 	/**  
-	 * HashMap的put方法
-	 * @param {Object} key
-	 * @param {Object} value
+	 * @description HashMap的put方法
+	 * @param {Object} key 存放的键
+	 * @param {Object} value 存放的值
 	 */
 	this.put = function(key, value) {
 		/**  
@@ -138,8 +115,8 @@ function hashMap() {
 	}
 
 	/**  
-	 * 通过Key从HashMap中取值
-	 * @param {Object} key  键值
+	 * @description 通过Key从HashMap中取值
+	 * @param {Object} key  键值,如果没有返回null
 	 */
 	this.load = function(key) {
 		var hashcode = this.hash(key);
@@ -160,8 +137,8 @@ function hashMap() {
 
 	}
 	/**  
-	 * 删除元素
-	 * @param {Object} key
+	 * @description 删除元素
+	 * @param {Object} key 键值
 	 */
 	this.remove = function(key) {
 		var hashcode = this.hash(key);
@@ -181,8 +158,9 @@ function hashMap() {
 	}
 
 	/**  
-	 * 是否包含Key
-	 * @param {Object} key
+	 * @description 是否包含Key
+	 * @param {Object} key 键值
+	 * @return {boolean} true包含，false不包含
 	 */
 	this.containsKey = function(key) {
 		var hashcode = this.hash(key);
@@ -202,8 +180,9 @@ function hashMap() {
 		return false;
 	}
 	/**  
-	 * 测试是否包含有值
-	 * @param {Object} value
+	 * @description 测试是否包含有值
+	 * @param {Object} value 值
+	 * @return {boolean} true包含，false不包含
 	 */
 	this.containsValue = function(value) {
 		for (i = 0; i &lt; table.length; i++) {
@@ -226,14 +205,15 @@ function hashMap() {
 
 
 	/**  
-	 * 取得元素个数
+	 * @description 取得元素个数
+	 * @return {number} 个数
 	 */
 	this.getSize = function() {
 		return size;
 	}
 
 	/**  
-	 * 重新Hash
+	 * @description 重新Hash
 	 * @param {Object} _this 当期hash表实例
 	 */
 	function rehash(_this) {
@@ -256,7 +236,7 @@ function hashMap() {
 	}
 
 	//Hash算法  
-	//// BKDR Hash  
+	//BKDR Hash  
 	function BKDRHash(key) {
 		var seed = 131;
 		var hashcode = 0;
@@ -267,7 +247,7 @@ function hashMap() {
 		return (hashcode % prime);
 	}
 
-	//// bernstein Hash  
+	//bernstein Hash  
 	function bernsteinHash(key) {
 		var seed = 33;
 		var hashcode = 0;
@@ -288,9 +268,9 @@ function hashMap() {
 	}
 
 	/**  
-	 * 存储单元，维护Key/Value关系
-	 * @param {Object} key
-	 * @param {Object} value
+	 * @description 存储单元，维护Key/Value关系
+	 * @param {Object} key 存放的键
+	 * @param {Object} value 存放的值
 	 */
 	var Entry = function(key, value) {
 		this.key = key;
@@ -309,13 +289,13 @@ function hashMap() {
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Namespaces</h3><ul><li><a href="_.html">AIS数组通用函数库</a></li><li><a href="__.html">AIS栈对象</a></li><li><a href="___.html">AIS队列对象</a></li></ul><h3>Global</h3><ul><li><a href="global.html#add">add</a></li><li><a href="global.html#containsKey">containsKey</a></li><li><a href="global.html#containsValue">containsValue</a></li><li><a href="global.html#getEnd">getEnd</a></li><li><a href="global.html#getHead">getHead</a></li><li><a href="global.html#getPrime">getPrime</a></li><li><a href="global.html#getSize">getSize</a></li><li><a href="global.html#getTop">getTop</a></li><li><a href="global.html#hash">hash</a></li><li><a href="global.html#isEmpty">isEmpty</a></li><li><a href="global.html#load">load</a></li><li><a href="global.html#makeEmpty">makeEmpty</a></li><li><a href="global.html#markEmpty">markEmpty</a></li><li><a href="global.html#pop">pop</a></li><li><a href="global.html#push">push</a></li><li><a href="global.html#put">put</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#setPrime">setPrime</a></li><li><a href="global.html#toString">toString</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Namespaces</h3><ul><li><a href="_.html">AIS hashmap对象</a></li></ul><h3>Global</h3><ul><li><a href="global.html#containsKey">containsKey</a></li><li><a href="global.html#containsValue">containsValue</a></li><li><a href="global.html#getPrime">getPrime</a></li><li><a href="global.html#getSize">getSize</a></li><li><a href="global.html#hash">hash</a></li><li><a href="global.html#load">load</a></li><li><a href="global.html#put">put</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#setPrime">setPrime</a></li></ul>
 </nav>
 
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha9</a> on Wed Aug 27 2014 17:35:27 GMT+0800 (中国标准时间)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha9</a> on Wed Aug 27 2014 17:50:39 GMT+0800 (中国标准时间)
 </footer>
 
 <script> prettyPrint(); </script>
