@@ -1,0 +1,7 @@
+/**
+ * @namespace AIS队列对象
+ * @author qinmudi
+ */
+function Queue(){
+	var aElement = new Array();
+}

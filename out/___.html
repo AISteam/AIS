@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Index</title>
+    <title>JSDoc: Namespace: AIS队列对象</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,30 +17,113 @@
 
 <div id="main">
 
-    <h1 class="page-title">Index</h1>
-
-    
-
-
-    
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
+    <h1 class="page-title">Namespace: AIS队列对象</h1>
 
     
 
 
 
+<section>
+
+<header>
+    <h2>
+    AIS队列对象
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>qinmudi</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ais.queue.js.html">ais.queue.js</a>, <a href="ais.queue.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+        
+            <h3>Example</h3>
+            
+    <pre class="prettyprint"><code>var oQueue = new Queue();
+	oQueue.EnQueue("bbs", "fans", "bruce");
+	console.log(oQueue.toString());
+	oQueue.EnQueue(23423);
+	console.log(oQueue.toString());
+	console.log(oQueue.DeQueue());
+	console.log(oQueue.GetSize());
+	console.log(oQueue.GetHead());
+	console.log(oQueue.GetEnd());
+	oQueue.MakeEmpty();
+	console.log(oQueue.IsEmpty());
+	console.log(oQueue.toString());
+	delete oQueue;</code></pre>
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
