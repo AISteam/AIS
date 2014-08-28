@@ -53,7 +53,7 @@ Base.extend = function(_instance, _static) { // subclass
     // class initialisation  
     if (typeof klass.init == "function") klass.init();  
     return klass;  
-};  
+};
   
 Base.prototype = {    
     extend: function(source, value) {  
@@ -139,7 +139,7 @@ Base = Base.extend({
     toString: function() {  
         return String(this.valueOf());  
     }  
-});  
+});
 
 
 // JavaScript Document  
