@@ -1,4 +1,15 @@
-(function(exports,AIS){
+/**
+ * @description 模块加载器
+ * @param  {object} exports window对象
+ * @param  {object} AIS     AIS对象
+ * @example
+ * require(['util', 'math', 'num'], function (util, math, num) { 
+     num = math.getRadom() + '_' + num;
+     num = util.formatNum(num);
+     console.log(num);
+   });
+ */
+;(function(exports,AIS){
 	//存储已加载的好的模块
 	var moduleCache = {};
 

@@ -9,8 +9,6 @@
  */
 
  ;(function(exports,AIS){
- 	var W3C = exports.document.dispatchEvent;
-
  	var slice = W3C ? function(nodes, start, end) {
         return factorys.slice.call(nodes, start, end);
     } : function(nodes, start, end) {
@@ -34,6 +32,4 @@
         }
         return ret;
     }
-
-    AIS.slice = slice;
  })(window,window.AIS||{});
