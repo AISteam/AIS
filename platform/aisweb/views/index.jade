@@ -1,0 +1,9 @@
+extends layout
+
+block scripts
+	link(rel='stylesheet', href='/static/css/bootstrap/bootstrap2.min.css')
+	script(src='/jquery2.js')
+
+block content
+	h1= title
+	p Welcome to #{title}

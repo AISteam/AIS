@@ -1,0 +1,85 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'ReadPreference',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'ReadPreference', null ]
+7 verbose cache add name=undefined spec="ReadPreference" args=["ReadPreference",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'ReadPreference',
+8 verbose parsed url   path: 'ReadPreference',
+8 verbose parsed url   href: 'ReadPreference' }
+9 silly lockFile 92e9d914-ReadPreference ReadPreference
+10 verbose lock ReadPreference C:\Users\17173\AppData\Roaming\npm-cache\92e9d914-ReadPreference.lock
+11 silly lockFile 92e9d914-ReadPreference ReadPreference
+12 silly lockFile 92e9d914-ReadPreference ReadPreference
+13 verbose addNamed [ 'ReadPreference', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 061b32e4-ReadPreference ReadPreference@
+16 verbose lock ReadPreference@ C:\Users\17173\AppData\Roaming\npm-cache\061b32e4-ReadPreference.lock
+17 silly addNameRange { name: 'ReadPreference', range: '*', hasData: false }
+18 verbose url raw ReadPreference
+19 verbose url resolving [ 'https://registry.npmjs.org/', './ReadPreference' ]
+20 verbose url resolved https://registry.npmjs.org/ReadPreference
+21 info trying registry request attempt 1 at 16:25:13
+22 http GET https://registry.npmjs.org/ReadPreference
+23 http 404 https://registry.npmjs.org/ReadPreference
+24 verbose headers { date: 'Wed, 17 Sep 2014 08:25:15 GMT',
+24 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'cache-control': 'max-age=0',
+24 verbose headers   'content-length': '52',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '0',
+24 verbose headers   'x-served-by': 'cache-ty66-TYO',
+24 verbose headers   'x-cache': 'MISS',
+24 verbose headers   'x-cache-hits': '0',
+24 verbose headers   'x-timer': 'S1410942314.301368,VS0,VE745',
+24 verbose headers   'keep-alive': 'timeout=10, max=50',
+24 verbose headers   connection: 'Keep-Alive' }
+25 silly registry.get cb [ 404,
+25 silly registry.get   { date: 'Wed, 17 Sep 2014 08:25:15 GMT',
+25 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly registry.get     'content-type': 'application/json',
+25 silly registry.get     'cache-control': 'max-age=0',
+25 silly registry.get     'content-length': '52',
+25 silly registry.get     'accept-ranges': 'bytes',
+25 silly registry.get     via: '1.1 varnish',
+25 silly registry.get     age: '0',
+25 silly registry.get     'x-served-by': 'cache-ty66-TYO',
+25 silly registry.get     'x-cache': 'MISS',
+25 silly registry.get     'x-cache-hits': '0',
+25 silly registry.get     'x-timer': 'S1410942314.301368,VS0,VE745',
+25 silly registry.get     'keep-alive': 'timeout=10, max=50',
+25 silly registry.get     connection: 'Keep-Alive' } ]
+26 silly lockFile 061b32e4-ReadPreference ReadPreference@
+27 silly lockFile 061b32e4-ReadPreference ReadPreference@
+28 error 404 404 Not Found: ReadPreference
+28 error 404
+28 error 404 'ReadPreference' is not in the npm registry.
+28 error 404 You should bug the author to publish it
+28 error 404 It was specified as a dependency of 'ais'
+28 error 404
+28 error 404 Note that you can also install from a
+28 error 404 tarball, folder, or http url, or git url.
+29 error System Windows_NT 6.1.7601
+30 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "ReadPreference" "--save-dev"
+31 error cwd D:\github\AIS\aiscore
+32 error node -v v0.10.28
+33 error npm -v 1.4.9
+34 error code E404
+35 verbose exit [ 1, true ]
