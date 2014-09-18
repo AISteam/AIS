@@ -1,0 +1,23 @@
+extends layout
+
+block scripts
+	link(rel='stylesheet', href='/css/login/signin.css')
+
+block content
+	.container
+		form.form-signin(role='form')
+			h2.text-center.form-signin-heading 请登录
+			input.form-control(type='email', placeholder='邮箱地址', required='', autofocus='')
+			input.form-control(type='password', placeholder='密码', required='')
+			.checkbox
+				label
+					input(type='checkbox', value='remember-me')
+					| 记住我
+			button.btn.btn-lg.btn-primary.btn-block(type='submit') 登录
+	// /container
+	blockquote.text-center
+		h2 A.I.S
+		p 全端集成解决方案
+		p 自动化集成解决方案
+		p 爱JS
+		footer 移动事业线 前端技术组
