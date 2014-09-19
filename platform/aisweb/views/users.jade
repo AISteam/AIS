@@ -94,8 +94,10 @@ block content
 							.form-group
 								label.col-sm-2.control-label(for='inputPassword3') 密码确认
 								.col-sm-10
-									input#inputPassword3.form-control(type='password', placeholder='请输入密码')
+									input#inputrPassword3.form-control(type='password', placeholder='请输入密码')
 					.modal-footer
 						button.btn.btn-default(type='button', data-dismiss='modal') 取消
-						button.btn.btn-primary(type='button') 保存
+						button#btn-saveUser.btn.btn-primary(type='button') 保存
 	// /container
+	block scriptsf
+		script(src="/javascripts/user.js")
