@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
 			collection.findOne(user, function(err, result) {
 				db.close();
 				if(result){
-					res.render('index', {title:'A.I.S自动化工作系统平台'});
+					res.render('index', {title:'A.I.S自动化工作系统'});
 				}else{
 					res.render('login',{errorMsg:'账号或密码错误，请重新登录'});
 				}

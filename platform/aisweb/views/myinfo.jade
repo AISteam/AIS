@@ -1,0 +1,40 @@
+extends layout
+
+block scriptsh
+	link(rel='stylesheet', href='/css/bootstrap/dashboard.css')
+	link(rel='stylesheet', href='/css/core/core.css')
+
+block content
+	include common/nav
+	.container-fluid
+		.row
+			include common/menu
+			.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+				h2.sub-header 个人信息管理
+				form.form-horizontal(role='form')
+					.form-group
+						label.col-sm-2.control-label(for='inputEmail3') 头像
+						.col-sm-5
+							img.img-circle(src='/images/qinmudi.jpg', width='100', height='100', alt='秦睦迪')
+						.col-sm-5
+							input#exampleInputFile(type='file')
+					.form-group
+						label.col-sm-2.control-label(for='inputEmail3') 姓名
+						.col-sm-10
+							input#inputEmail3.form-control(type='email', placeholder='请输入您的姓名')
+					.form-group
+						label.col-sm-2.control-label(for='inputPassword3') 工号
+						.col-sm-10
+							input#inputPassword3.form-control(type='password', placeholder='请输入您的工号')
+					.form-group
+						label.col-sm-2.control-label(for='inputPassword3') 手机号
+						.col-sm-10
+							input#inputPassword3.form-control(type='password', placeholder='请输入您的手机号')
+					.form-group
+						label.col-sm-2.control-label(for='inputPassword3') 所属部门
+						.col-sm-10
+							input#inputPassword3.form-control(type='password', placeholder='请输入您的所属部门')
+					.form-group
+						.col-sm-offset-2.col-sm-10
+							button.btn.btn-default(type='submit') 修改
+	// /container

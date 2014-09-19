@@ -1,0 +1,101 @@
+extends layout
+
+block scriptsh
+	link(rel='stylesheet', href='/css/bootstrap/dashboard.css')
+	link(rel='stylesheet', href='/css/core/core.css')
+
+block content
+	include common/nav
+	.container-fluid
+		.row
+			include common/menu
+			.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+				h2.sub-header
+						| 用户管理
+						a.btn.btn-default.pull-right(href='#', data-toggle='modal', data-target='#myModal') 添加用户
+					.table-responsive
+						table.table.table-striped
+							thead
+								tr
+									th 编号
+									th 账号
+									th 用户姓名
+									th 注册时间
+									th 操作
+							tbody
+								tr
+									td 1
+									td qinmudi@139.com
+									td 秦睦迪
+									td 2014/09/16
+									td
+										a.btn.btn-default(href='#') 修改
+										a.btn.btn-default(href='#') 删除
+								tr
+									td 2
+									td chixiang@cyou-inc.com
+									td 池翔
+									td 2014/09/16
+									td
+										a.btn.btn-default(href='#') 修改
+										a.btn.btn-default(href='#') 删除
+								tr
+									td 3
+									td chenqilin@cyou-inc.com
+									td 陈其林
+									td 2014/09/16
+									td
+										a.btn.btn-default(href='#') 修改
+										a.btn.btn-default(href='#') 删除
+						ul.pagination.pull-right
+							li.disabled
+								a(href='#') «
+							li.active
+								a(href='#')
+									| 1 
+									span.sr-only (current)
+							li
+								a(href='#')
+									| 1 
+									span.sr-only (current)
+							li
+								a(href='#')
+									| 2 
+									span.sr-only (current)
+							li
+								a(href='#')
+									| 3 
+									span.sr-only (current)
+							li
+								a(href='#')
+									| 4 
+									span.sr-only (current)
+							li
+								a(href='#') »
+		// Modal
+		#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button.close(type='button', data-dismiss='modal')
+							span(aria-hidden='true') ×
+							span.sr-only Close
+						h4#myModalLabel.modal-title 添加新用户
+					.modal-body
+						form.form-horizontal(role='form')
+							.form-group
+								label.col-sm-2.control-label(for='inputEmail3') 账号
+								.col-sm-10
+									input#inputEmail3.form-control(type='email', placeholder='账号只能为邮箱')
+							.form-group
+								label.col-sm-2.control-label(for='inputPassword3') 密码
+								.col-sm-10
+									input#inputPassword3.form-control(type='password', placeholder='请输入密码')
+							.form-group
+								label.col-sm-2.control-label(for='inputPassword3') 密码确认
+								.col-sm-10
+									input#inputPassword3.form-control(type='password', placeholder='请输入密码')
+					.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') 取消
+						button.btn.btn-primary(type='button') 保存
+	// /container
