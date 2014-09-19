@@ -1,6 +1,6 @@
 extends layout
 
-block scripts
+block scriptsh
 	link(rel='stylesheet', href='/css/bootstrap/dashboard.css')
 	link(rel='stylesheet', href='/css/core/core.css')
 
@@ -22,6 +22,8 @@ block content
 						a(href='#') 个人资料
 					li
 						a(href='#') 帮助
+					li
+						a(href='login') 退出
 				form.navbar-form.navbar-right
 					input.form-control(type='text', placeholder='Search...')
 	.container-fluid

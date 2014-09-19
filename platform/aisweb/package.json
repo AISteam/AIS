@@ -14,5 +14,8 @@
     "debug": "~1.0.4",
     "jade": "~1.5.0",
     "node-compass": "0.2.3"
+  },
+  "devDependencies": {
+    "mongodb": "^1.4.12"
   }
 }

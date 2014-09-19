@@ -1,0 +1,14 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.post('/', function(req, res, next) {
+	if(req.body['email']=='qinmudi@139.com'&&req.body['password']=='110361313'){
+		res.render('index', { title: 'A.I.S自动化工作系统平台' });
+	}else{
+		res.render('login');
+	}
+	
+});
+
+module.exports = router;

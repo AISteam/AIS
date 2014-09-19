@@ -1,19 +1,20 @@
 extends layout
 
-block scripts
+block scriptsh
 	link(rel='stylesheet', href='/css/login/signin.css')
 
 block content
 	.container
-		form.form-signin(role='form')
+		form.form-signin(role='form',action='/',method='post')
 			h2.text-center.form-signin-heading 请登录
-			input.form-control(type='email', placeholder='邮箱地址', required='', autofocus='')
-			input.form-control(type='password', placeholder='密码', required='')
+			p.text-center.error #{errorMsg}
+			input.form-control(name='email',type='email', placeholder='邮箱地址', required='', autofocus='')
+			input.form-control(name='password',type='password', placeholder='密码', required='')
 			.checkbox
 				label
 					input(type='checkbox', value='remember-me')
 					| 记住我
-			button.btn.btn-lg.btn-primary.btn-block(type='submit') 登录
+			button#btnLogin.btn.btn-lg.btn-primary.btn-block(type='submit') 登录
 	// /container
 	blockquote.text-center
 		h2 A.I.S
@@ -21,3 +22,8 @@ block content
 		p 自动化集成解决方案
 		p 爱JS
 		footer 移动事业线 前端技术组
+
+block scriptsf
+	script(src="/javascripts/login.js")
+	script(src="/assets/js/ie-emulation-modes-warning.js")
+	script(src="/assets/js/ie10-viewport-bug-workaround.js")
