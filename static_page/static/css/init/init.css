@@ -1,0 +1,19 @@
+
+.tab-pane{padding-top: 15px}
+.show-grid{margin-bottom: 15px;}
+
+.charset-select{margin-left:109px;}
+.http-equiv-select{margin-left:126px; }
+.content-select{margin-left: 71px;}
+.name-select{margin-left: 100px;}
+.css-select{margin-left: 85px;}
+.js-select{margin-left: 124px;}
+
+
+
+
+
+.add:hover{cursor: pointer;}
+.add:hover .btn{background: #adadad}
+.add:hover .glyphicon-plus-sign{color: #adadad;}
+

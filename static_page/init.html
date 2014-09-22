@@ -16,6 +16,7 @@
   <!-- Custom styles for this template -->
   <link href="static/css/bootstrap/dashboard.css" rel="stylesheet">
   <link href="static/css/core/core.css" rel="stylesheet">
+  <link href="static/css/init/init.css" rel="stylesheet">
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]>
   <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
@@ -59,9 +60,7 @@
       </div>
     </div>
   </nav>
-
   <div class="container-fluid">
-
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-sidebar ">
@@ -111,120 +110,294 @@
         <div class="jumbotron init">
           <h1>A.I.S-项目构建</h1>
           <p>提供常用类库选择,脚手架生成,模板保存功能</p>
-          <form role="form" class="clearfix">
-            <div class="row">
-              <h4>ui 框架</h4>
-                <div class="form-group col-sm-2">
-                  <select class="form-control" >
-                    <option value="">jquery</option>
-                    <option value="">jquery1.0</option>
-                    <option value="">jquery2.0</option>
-                    <option value="">jquery3.0</option>
-                    <option value="">jquery4.0</option>
-                    <option value="">jquery5.0</option>
-                    <option value="">jquery16.0</option>
-                    <option value="">jquery17.0</option>
-                    <option value="">jquery18.0</option>
-                  </select>
+          <form role="form" class="clearfix form-inline" >
+            <ul class="nav nav-tabs" role="tablist" id="myTab">
+              <li class="active"><a href="#meta" role="tab" data-toggle="tab">meta</a></li>
+              <li><a href="#css" role="tab" data-toggle="tab">css</a></li>
+              <li><a href="#javascript" role="tab" data-toggle="tab">javascript</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="meta">
+                <div class="row">
+                  <div class="col-md-4 show-grid">
+                    <div class="form-group">
+                      <div class="input-group ">
+                        <span class="input-group-addon">
+                          <input type="checkbox" checked="checked">
+                        </span>
+                        <div class="input-group-addon">charset</div>
+                        <input class="form-control"  value="UTF-8" data-toggle="dropdown" >
+                        <ul class="dropdown-menu charset-select" role="menu">
+                          <li><a href="#">UTF-8</a></li>
+                          <li><a href="#">GB2312</a></li>
+                          <li><a href="#">GBK</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group col-sm-2">
-                  <select class="form-control" >
-                    <option value="">zepto</option>
-                    <option value="">zepto1.0</option>
-                    <option value="">zepto2.0</option>
-                    <option value="">zepto3.0</option>
-                    <option value="">zepto4.0</option>
-                    <option value="">zepto5.0</option>
-                    <option value="">zepto16.0</option>
-                    <option value="">zepto17.0</option>
-                    <option value="">zepto18.0</option>
-                  </select>
+                <div class="row">
+                  <div class="col-md-12 show-grid">
+                    <div class="input-group  add">
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-plus-sign"></span> 
+                      </div>
+                      <div class="input-group-btn">
+                       <button type="button" class="btn btn-default" tabindex="-1">http-equiv</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 show-grid">
+                    <div class="form-group">
+                      <div class="input-group ">
+                        <span class="input-group-addon">
+                          <input type="checkbox" checked="checked">
+                        </span>
+                        <div class="input-group-addon">http-equiv</div>
+                        <input class="form-control"  value="X-UA-Compatible" data-toggle="dropdown" >
+                        <ul class="dropdown-menu  http-equiv-select" role="menu">
+                          <li><a href="#">X-UA-Compatible</a></li>
+                          <li><a href="#">content-type</a></li>
+                          <li><a href="#">default-style</a></li>
+                          <li><a href="#">refresh</a></li>
+                        </ul>
+                      </div>
+                      <div class="input-group ">
+                        <div class="input-group-addon">content</div>
+                        <input class="form-control"  value="IE=edge" data-toggle="dropdown" >
+                        <ul class="dropdown-menu content-select" role="menu">
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                        </ul>
+                        
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group col-sm-2">
-                  <select class="form-control" >
-                    <option value="">jquery</option>
-                    <option value="">jquery1.0</option>
-                    <option value="">jquery2.0</option>
-                    <option value="">jquery3.0</option>
-                    <option value="">jquery4.0</option>
-                    <option value="">jquery5.0</option>
-                    <option value="">jquery16.0</option>
-                    <option value="">jquery17.0</option>
-                    <option value="">jquery18.0</option>
-                  </select>
+                <div class="row">
+                  <div class="col-md-12 show-grid">
+                    <div class="input-group  add">
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-plus-sign"></span> 
+                      </div>
+                      <div class="input-group-btn">
+                       <button type="button" class="btn btn-default" tabindex="-1">name</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 show-grid">
+                    <div class="form-group">
+                      <div class="input-group ">
+                        <span class="input-group-addon">
+                          <input type="checkbox" checked="checked">
+                        </span>
+                        <div class="input-group-addon">name</div>
+                        <input class="form-control"  value="keywords" data-toggle="dropdown" >
+                        <ul class="dropdown-menu name-select" role="menu">
+                          <li><a href="#">keywords</a></li>
+                          <li><a href="#">description</a></li>
+                          <li><a href="#">author</a></li>
+                          <li><a href="#">viewport</a></li>
+                          <li><a href="#">author</a></li>
+                          <li><a href="#">generator</a></li>
+                          <li><a href="#">revised</a></li>
+                          <li><a href="#">others</a></li>
+                        </ul>
+                      </div>
+                      <div class="input-group ">
+                        <div class="input-group-addon">content</div>
+                        <input class="form-control"  value=""  >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 show-grid">
+                    <div class="form-group">
+                      <div class="input-group ">
+                        <span class="input-group-addon">
+                          <input type="checkbox" checked="checked">
+                        </span>
+                        <div class="input-group-addon">name</div>
+                        <input class="form-control"  value="description" data-toggle="dropdown" >
+                        <ul class="dropdown-menu name-select" role="menu">
+                          <li><a href="#">keywords</a></li>
+                          <li><a href="#">description</a></li>
+                          <li><a href="#">author</a></li>
+                          <li><a href="#">viewport</a></li>
+                          <li><a href="#">author</a></li>
+                          <li><a href="#">generator</a></li>
+                          <li><a href="#">revised</a></li>
+                          <li><a href="#">others</a></li>
+                        </ul>
+                      </div>
+                      <div class="input-group ">
+                        <div class="input-group-addon">content</div>
+                        <input class="form-control"  value=""  >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 show-grid">
+                    <div class="form-group">
+                      <div class="input-group ">
+                        <span class="input-group-addon">
+                          <input type="checkbox" checked="checked">
+                        </span>
+                        <div class="input-group-addon">name</div>
+                        <input class="form-control"  value="author" data-toggle="dropdown" >
+                        <ul class="dropdown-menu name-select" role="menu">
+                          <li><a href="#">keywords</a></li>
+                          <li><a href="#">description</a></li>
+                          <li><a href="#">author</a></li>
+                          <li><a href="#">viewport</a></li>
+                          <li><a href="#">author</a></li>
+                          <li><a href="#">generator</a></li>
+                          <li><a href="#">revised</a></li>
+                          <li><a href="#">others</a></li>
+                        </ul>
+                      </div>
+                      <div class="input-group ">
+                        <div class="input-group-addon">content</div>
+                        <input class="form-control"  value=""  >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 show-grid">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="checkbox" >
+                        </span>
+                        <div class="input-group-addon">name</div>
+                        <input class="form-control"  value="viewport" data-toggle="dropdown" >
+                        <ul class="dropdown-menu name-select" role="menu">
+                          <li><a href="#">keywords</a></li>
+                          <li><a href="#">description</a></li>
+                          <li><a href="#">author</a></li>
+                          <li><a href="#">viewport</a></li>
+                          <li><a href="#">author</a></li>
+                          <li><a href="#">generator</a></li>
+                          <li><a href="#">revised</a></li>
+                          <li><a href="#">others</a></li>
+                        </ul>
+                      </div>
+                      <div class="input-group ">
+                        <div class="input-group-addon">content</div>
+                        <input class="form-control"  value=""  >
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group col-sm-2">
-                  <select class="form-control" >
-                    <option value="">zepto</option>
-                    <option value="">zepto2.0</option>
-                    <option value="">zepto3.0</option>
-                    <option value="">zepto4.0</option>
-                    <option value="">zepto5.0</option>
-                    <option value="">zepto16.0</option>
-                    <option value="">zepto17.0</option>
-                    <option value="">zepto18.0</option>
-                  </select>
+              </div>
+              <div class="tab-pane" id="css">
+                <div class="row">
+                  <div class="col-md-12 show-grid">
+                    <div class="input-group  add">
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-plus-sign"></span> 
+                      </div>
+                      <div class="input-group-btn">
+                       <button type="button" class="btn btn-default" tabindex="-1">css</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 show-grid">
+                    <div class="form-group">
+                      <div class="input-group ">
+                        <span class="input-group-addon">
+                          <input type="checkbox" checked="checked">
+                        </span>
+                        <div class="input-group-addon">css</div>
+                        <input class="form-control"  value="default" data-toggle="dropdown" >
+                        <ul class="dropdown-menu css-select" role="menu">
+                          <li><a href="#">default</a></li>
+                          <li><a href="#">css</a></li>
+                          <li><a href="#">zepto.css</a></li>
+                          <li><a href="#">jquery.min.css</a></li>
+                          <li><a href="#">bootstrap.min.css</a></li>
+                        </ul>
+                        <span class="input-group-addon">
+                          <label>
+                            <input type="radio" checked="checked" name="cssA">
+                            线上
+                          </label>
+                        </span>
+                        <span class="input-group-addon">
+                          <label>
+                            <input type="radio"  name="cssA">
+                            线下
+                          </label>
+                        </span>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="tab-pane" id="javascript">
+                <div class="row">
+                  <div class="col-md-12 show-grid">
+                    <div class="input-group  add">
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-plus-sign"></span> 
+                      </div>
+                      <div class="input-group-btn">
+                       <button type="button" class="btn btn-default" tabindex="-1">javascript</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 show-grid">
+                    <div class="form-group">
+                      <div class="input-group ">
+                        <span class="input-group-addon">
+                          <input type="checkbox" checked="checked">
+                        </span>
+                        <div class="input-group-addon">javascript</div>
+                        <input class="form-control"  value="jquery.min.js" data-toggle="dropdown" >
+                        <ul class="dropdown-menu js-select" role="menu">
+                          <li><a href="#">jquery.min.js</a></li>
+                          <li><a href="#">zepto.js</a></li>
+                          <li><a href="#">bootstrap.min.js</a></li>
+                        </ul>
+                        <span class="input-group-addon">
+                          <label>
+                            <input type="radio" checked="checked" name="jsA">
+                            线上
+                          </label>
+                        </span>
+                        <span class="input-group-addon">
+                          <label>
+                            <input type="radio"  name="jsA">
+                            线下
+                          </label>
+                        </span>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <script>
+             
+              var meta = {
+                'http-equiv':['content-type','expires','refresh','set-cookie'],
+                'name':['viewport','author','description','keywords','generator','revised','others']
+              }
+
+
+
+            </script>
+
+
+
+            
             <div class="row">
-              <h4>移动开发框架</h4>
-              <div class="form-group col-sm-2">
-                <select class="form-control" >
-                  <option value="">jquery1.0</option>
-                  <option value="">jquery2.0</option>
-                  <option value="">jquery3.0</option>
-                  <option value="">jquery4.0</option>
-                  <option value="">jquery5.0</option>
-                  <option value="">jquery16.0</option>
-                  <option value="">jquery17.0</option>
-                  <option value="">jquery18.0</option>
-                </select>
-              </div>
-              <div class="form-group col-sm-2">
-                <select class="form-control" >
-                  <option value="">zepto1.0</option>
-                  <option value="">zepto2.0</option>
-                  <option value="">zepto3.0</option>
-                  <option value="">zepto4.0</option>
-                  <option value="">zepto5.0</option>
-                  <option value="">zepto16.0</option>
-                  <option value="">zepto17.0</option>
-                  <option value="">zepto18.0</option>
-                </select>
-              </div>
-            </div>
-            <div class="row">
-              <h4>jquery插件</h4>
-              <div class="form-group col-sm-2">
-                <select class="form-control" >
-                  <option value="">jquery1.0</option>
-                  <option value="">jquery2.0</option>
-                  <option value="">jquery3.0</option>
-                  <option value="">jquery4.0</option>
-                  <option value="">jquery5.0</option>
-                  <option value="">jquery16.0</option>
-                  <option value="">jquery17.0</option>
-                  <option value="">jquery18.0</option>
-                </select>
-              </div>
-              <div class="form-group col-sm-2">
-                <select class="form-control" >
-                  <option value="">zepto1.0</option>
-                  <option value="">zepto2.0</option>
-                  <option value="">zepto3.0</option>
-                  <option value="">zepto4.0</option>
-                  <option value="">zepto5.0</option>
-                  <option value="">zepto16.0</option>
-                  <option value="">zepto17.0</option>
-                  <option value="">zepto18.0</option>
-                </select>
-              </div>
-            </div>
-           <div class="row">
               <div class="form-group col-sm-12">
                 <button type="submit" class="btn btn-primary">生成模板</button>
               </div>
-           </div>
+            </div>
           </form> 
        </div>
       </div>

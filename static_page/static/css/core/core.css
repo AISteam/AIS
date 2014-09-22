@@ -1,1 +1,4 @@
-.welcome,.init{margin: -40px;}
+.welcome,.init{margin: -20px;}
+@media (min-width: 768px){
+	.welcome,.init{margin: -40px;}
+}
