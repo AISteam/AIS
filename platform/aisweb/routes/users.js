@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 
 router.get('/list',function(req,res){
 	db.open(function(err,db){
-		db.collection('ais',function(err,collection){
+		db.collection('users',function(err,collection){
 			collection.find().toArray(function(err,users){
 				db.close();
 				console.log(users);
@@ -23,10 +23,11 @@ router.get('/list',function(req,res){
 });
 
 router.post('/add',function(req,res){
-	var user = {'name':req.body['email'],'password':req.body['password']};
+	var user = {'name':req.body['name'],'email':req.body['email'],'password':req.body['password'],'regDate':req.body['regDate']};
 	db.open(function(err,db){
-		db.collection('ais',function(err,collection){
+		db.collection('users',function(err,collection){
 			collection.insert(user,{safe:true},function(err,result){
+				db.close();
 				if(err){
 					res.json({
 						code: 1,

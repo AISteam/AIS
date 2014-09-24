@@ -3,6 +3,7 @@ extends layout
 block scriptsh
 	link(rel='stylesheet', href='/css/bootstrap/dashboard.css')
 	link(rel='stylesheet', href='/css/core/core.css')
+	script(src="/javascripts/ais/ais.date.js")
 
 block content
 	include common/nav
@@ -22,31 +23,7 @@ block content
 									th 用户姓名
 									th 注册时间
 									th 操作
-							tbody
-								tr
-									td 1
-									td qinmudi@139.com
-									td 秦睦迪
-									td 2014/09/16
-									td
-										a.btn.btn-default(href='#') 修改
-										a.btn.btn-default(href='#') 删除
-								tr
-									td 2
-									td chixiang@cyou-inc.com
-									td 池翔
-									td 2014/09/16
-									td
-										a.btn.btn-default(href='#') 修改
-										a.btn.btn-default(href='#') 删除
-								tr
-									td 3
-									td chenqilin@cyou-inc.com
-									td 陈其林
-									td 2014/09/16
-									td
-										a.btn.btn-default(href='#') 修改
-										a.btn.btn-default(href='#') 删除
+							tbody#userContainer
 						ul.pagination.pull-right
 							li.disabled
 								a(href='#') «
@@ -84,6 +61,10 @@ block content
 					.modal-body
 						form.form-horizontal(role='form')
 							.form-group
+								label.col-sm-2.control-label(for='inputName') 姓名
+								.col-sm-10
+									input#inputName.form-control(type='name', placeholder='请输入姓名')
+							.form-group
 								label.col-sm-2.control-label(for='inputEmail3') 账号
 								.col-sm-10
 									input#inputEmail3.form-control(type='email', placeholder='账号只能为邮箱')
@@ -98,6 +79,18 @@ block content
 					.modal-footer
 						button.btn.btn-default(type='button', data-dismiss='modal') 取消
 						button#btn-saveUser.btn.btn-primary(type='button') 保存
+		script#userItemTpl(type='template')
+			|- for( var item in data ){
+			|	tr
+			|		td \#{data[item]['_id']}
+			|		td \#{data[item]['email']}
+			|		td \#{data[item]['name']}
+			|		td \#{new Date(data[item]['regDate']).format("yyyy-MM-dd hh:mm:ss")}
+			|		td
+			|			a.btn.btn-default(href="javascript:void(0);",userId="\#{data[item]['_id']}",type="edit") 修改
+			|			a.btn.btn-default(href="javascript:void(0);",userId="\#{data[item]['_id']}",type="delete") 删除
+			|- }
 	// /container
 	block scriptsf
 		script(src="/javascripts/user.js")
+		script(src="/javascripts/template/jade.js")
