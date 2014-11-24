@@ -119,3 +119,5 @@ function StringBuilder() {
         return this._string_.join('');
     }
 }
+
+String.prototype.len=function(){return this.replace('[^\x00-\xff]/g',"aa").length;}  
